@@ -1,0 +1,65 @@
+{
+  "nom": "Holy Spirit Team",
+  "slogan": "L'équipe du Saint-Esprit : servir et partager l'amour de Dieu manifesté en Christ, de Songon jusqu'aux extrémités de la terre.",
+  "logo": "images/logo.png",
+  "icone": "images/cle-de-sol.png",
+  "accueil": {
+    "surtitre": "Songon • Côte d'Ivoire • Le monde",
+    "titre": "L'équipe du Saint-Esprit, au service de Dieu et des hommes",
+    "texte": "Adoration de qualité, évangélisation et œuvres caritatives : nous aimons servir et partager autour de nous l'amour de Dieu manifesté en Jésus-Christ.",
+    "image": "",
+    "boutonPrincipal": { "texte": "Découvrir nos départements", "lien": "#departements" },
+    "boutonSecondaire": { "texte": "Nous rejoindre", "lien": "#rejoindre" }
+  },
+  "verset": {
+    "texte": "Mais vous recevrez une puissance, le Saint-Esprit survenant sur vous, et vous serez mes témoins à Jérusalem, dans toute la Judée, dans la Samarie, et jusqu'aux extrémités de la terre.",
+    "reference": "Actes 1 : 8"
+  },
+  "apropos": {
+    "titre": "Qui sommes-nous ?",
+    "paragraphes": [
+      "Holy Spirit Team (HST) est une vision née à Songon, en Côte d'Ivoire. D'abord groupe vocal chrétien, HST s'est ouvert à toutes les personnes désireuses de servir : chantres, musiciens, intercesseurs, communicants et bénévoles forment aujourd'hui une seule équipe, l'équipe du Saint-Esprit.",
+      "Conduits par l'Esprit, nous nous engageons dans une adoration de qualité, l'évangélisation et les œuvres caritatives. Nous aimons servir et partager l'amour de Dieu manifesté en Christ autour de nous.",
+      "Notre désir : toucher la Côte d'Ivoire et le monde entier avec l'Évangile de Jésus-Christ."
+    ],
+    "image": "",
+    "chiffres": [
+      { "valeur": "6", "label": "Départements" },
+      { "valeur": "40+", "label": "Membres engagés" },
+      { "valeur": "100+", "label": "Actions menées" }
+    ]
+  },
+  "valeurs": [
+    { "icone": "musique", "titre": "Adoration de qualité", "texte": "Offrir à Dieu une louange et une adoration excellentes, inspirées et conduites par le Saint-Esprit." },
+    { "icone": "croix", "titre": "Évangélisation", "texte": "Annoncer Jésus-Christ à Songon, dans toute la Côte d'Ivoire et jusqu'aux extrémités de la terre." },
+    { "icone": "mains", "titre": "Œuvres caritatives", "texte": "Servir les plus fragiles et manifester concrètement l'amour de Dieu révélé en Christ." }
+  ],
+  "rejoindre": {
+    "titre": "Rejoignez l'aventure",
+    "texte": "Vous avez un talent, un cœur pour servir ou simplement le désir de grandir dans la foi ? Il y a une place pour vous dans l'un de nos départements.",
+    "bouton": { "texte": "Je veux servir", "lien": "#contact" }
+  },
+  "soutenir": {
+    "titre": "Soutenir nos œuvres",
+    "texte": "Vos dons permettent de financer nos actions sociales, nos campagnes d'évangélisation et notre matériel musical. Que Dieu vous bénisse pour votre générosité.",
+    "moyens": [
+      { "titre": "Mobile Money", "details": "[Numéro à préciser]" },
+      { "titre": "Virement bancaire", "details": "[Coordonnées à préciser]" },
+      { "titre": "Dons en nature", "details": "Vivres, vêtements, fournitures scolaires" }
+    ]
+  },
+  "contact": {
+    "adresse": "Songon, Côte d'Ivoire",
+    "telephone": "+225 00 00 00 00 00",
+    "whatsapp": "",
+    "email": "contact@holyspiritteam.org",
+    "horaires": "Répétitions : [jour et heure à préciser]",
+    "formspree": ""
+  },
+  "reseaux": {
+    "facebook": "",
+    "youtube": "",
+    "instagram": "",
+    "tiktok": ""
+  }
+}

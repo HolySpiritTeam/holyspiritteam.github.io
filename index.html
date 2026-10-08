@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Holy Spirit Team — Louange, Évangélisation & Œuvres sociales</title>
+  <meta name="description" content="Holy Spirit Team (HST), groupe vocal chrétien né à Songon, Côte d'Ivoire : adoration de qualité, évangélisation et œuvres caritatives pour partager l'amour de Dieu manifesté en Christ.">
+  <meta property="og:title" content="Holy Spirit Team — groupe vocal chrétien, Songon (Côte d'Ivoire)">
+  <meta property="og:description" content="L'équipe du Saint-Esprit : servir et partager l'amour de Dieu manifesté en Christ.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://holyspiritteam.github.io/">
+  <meta property="og:image" content="https://holyspiritteam.github.io/images/logo.png">
+  <link rel="icon" href="images/cle-de-sol.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ===== EN-TÊTE ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#accueil" class="brand" aria-label="Holy Spirit Team — accueil">
+        <img src="images/logo.png" alt="Holy Spirit Team — groupe vocal" class="brand__logo" data-logo>
+      </a>
+      <button class="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="nav" aria-label="Navigation principale">
+        <a href="#apropos">À propos</a>
+        <a href="#departements">Départements</a>
+        <a href="#actualites">Actualités</a>
+        <a href="#evenements">Événements</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#videos">Vidéos</a>
+        <a href="#contact" class="btn btn--small btn--gold">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== ACCUEIL ===== -->
+    <section class="hero" id="accueil">
+      <div class="hero__bg" id="hero-bg"></div>
+      <div class="container hero__content">
+        <p class="hero__eyebrow" id="hero-surtitre"></p>
+        <h1 class="hero__title" id="hero-titre"></h1>
+        <p class="hero__text" id="hero-texte"></p>
+        <div class="hero__actions" id="hero-actions"></div>
+      </div>
+      <a href="#verset" class="hero__scroll" aria-label="Défiler vers le bas"></a>
+    </section>
+
+    <!-- ===== VERSET ===== -->
+    <section class="verse" id="verset">
+      <div class="container">
+        <blockquote>
+          <p id="verset-texte"></p>
+          <cite id="verset-ref"></cite>
+        </blockquote>
+      </div>
+    </section>
+
+    <!-- ===== À PROPOS ===== -->
+    <section class="section" id="apropos">
+      <div class="container about">
+        <div class="about__media reveal" id="apropos-media"></div>
+        <div class="about__body reveal">
+          <span class="kicker">Notre histoire</span>
+          <h2 class="section__title" id="apropos-titre"></h2>
+          <div id="apropos-texte"></div>
+          <div class="stats" id="apropos-chiffres"></div>
+        </div>
+      </div>
+      <div class="container cards cards--3" id="valeurs"></div>
+    </section>
+
+    <!-- ===== DÉPARTEMENTS ===== -->
+    <section class="section section--tint" id="departements">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Notre organisation</span>
+          <h2 class="section__title">Nos départements</h2>
+          <p class="section__lead">Chaque membre sert selon le don qu'il a reçu, pour l'édification de tous.</p>
+        </div>
+        <div class="cards cards--3" id="departements-liste"></div>
+      </div>
+    </section>
+
+    <!-- ===== ACTUALITÉS ===== -->
+    <section class="section" id="actualites">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">La vie de l'équipe</span>
+          <h2 class="section__title">Actualités</h2>
+        </div>
+        <div class="cards cards--3" id="actualites-liste"></div>
+      </div>
+    </section>
+
+    <!-- ===== ÉVÉNEMENTS ===== -->
+    <section class="section section--dark" id="evenements">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker kicker--light">Agenda</span>
+          <h2 class="section__title">Événements à venir</h2>
+          <p class="section__lead">Venez vivre ces moments avec nous — tout le monde est le bienvenu.</p>
+        </div>
+        <div class="events" id="evenements-liste"></div>
+      </div>
+    </section>
+
+    <!-- ===== GALERIE ===== -->
+    <section class="section" id="galerie">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">En images</span>
+          <h2 class="section__title">Galerie photos</h2>
+        </div>
+        <div class="filters" id="galerie-filtres"></div>
+        <div class="gallery" id="galerie-liste"></div>
+      </div>
+    </section>
+
+    <!-- ===== VIDÉOS ===== -->
+    <section class="section section--tint" id="videos">
+      <div class="container">
+        <div class="section__head reveal">
+          <span class="kicker">Louange & témoignages</span>
+          <h2 class="section__title">Vidéos</h2>
+        </div>
+        <div class="cards cards--3" id="videos-liste"></div>
+      </div>
+    </section>
+
+    <!-- ===== REJOINDRE & SOUTENIR ===== -->
+    <section class="section" id="rejoindre">
+      <div class="container engage">
+        <div class="engage__card engage__card--join reveal">
+          <h2 id="rejoindre-titre"></h2>
+          <p id="rejoindre-texte"></p>
+          <a class="btn btn--gold" id="rejoindre-bouton"></a>
+        </div>
+        <div class="engage__card reveal" id="soutenir">
+          <h2 id="soutenir-titre"></h2>
+          <p id="soutenir-texte"></p>
+          <ul class="give" id="soutenir-moyens"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section class="section section--tint" id="contact">
+      <div class="container contact">
+        <div class="contact__info reveal">
+          <span class="kicker">Restons en contact</span>
+          <h2 class="section__title">Contactez-nous</h2>
+          <p class="section__lead">Une question, une demande de prière, une invitation pour un événement ? Écrivez-nous.</p>
+          <ul class="contact__list" id="contact-liste"></ul>
+          <div class="socials" id="contact-reseaux"></div>
+        </div>
+        <form class="form reveal" id="contact-form">
+          <div class="form__row">
+            <label>Nom complet<input type="text" name="nom" required></label>
+            <label>E-mail<input type="email" name="email" required></label>
+          </div>
+          <label>Objet
+            <select name="objet">
+              <option>Renseignement</option>
+              <option>Demande de prière</option>
+              <option>Rejoindre un département</option>
+              <option>Invitation / Événement</option>
+              <option>Soutien / Don</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" rows="5" required></textarea></label>
+          <button type="submit" class="btn btn--primary">Envoyer le message</button>
+          <p class="form__status" id="form-status" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== PIED DE PAGE ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div>
+        <a href="#accueil" class="brand brand--light">
+          <img src="images/cle-de-sol.png" alt="" class="brand__logo" data-icone>
+          <span class="brand__name" data-nom>Holy Spirit Team</span>
+        </a>
+        <p class="footer__slogan" id="footer-slogan"></p>
+      </div>
+      <div class="socials socials--light" id="footer-reseaux"></div>
+    </div>
+    <div class="container footer__bottom">
+      <p>© <span id="annee"></span> <span data-nom>Holy Spirit Team</span>. Tous droits réservés.</p>
+      <p>« À Dieu seul soit la gloire »</p>
+    </div>
+  </footer>
+
+  <!-- ===== VISIONNEUSE (photos & vidéos) ===== -->
+  <div class="lightbox" id="lightbox" hidden>
+    <button class="lightbox__close" aria-label="Fermer">&times;</button>
+    <button class="lightbox__nav lightbox__nav--prev" aria-label="Précédent">&#8249;</button>
+    <div class="lightbox__content" id="lightbox-content"></div>
+    <button class="lightbox__nav lightbox__nav--next" aria-label="Suivant">&#8250;</button>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
