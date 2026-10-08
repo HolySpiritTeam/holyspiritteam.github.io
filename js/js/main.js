@@ -76,7 +76,17 @@
   /* ---------- Accueil & verset ---------- */
   function accueil() {
     const a = S.accueil || {};
-    texte("hero-surtitre", a.surtitre);
+    // Surtitre : « Songon > Côte d'Ivoire > Afrique » devient un parcours animé
+    const etapes = String(a.surtitre || "").split(/\s*(?:→|•|>|\|)\s*/).filter(Boolean);
+    const surtitre = $("#hero-surtitre");
+    if (etapes.length > 1) {
+      surtitre.className = "parcours";
+      surtitre.setAttribute("aria-label", etapes.join(", puis "));
+      surtitre.innerHTML = etapes.map((e, i) =>
+        `<span class="parcours__pas" style="--i:${i}">${i ? '<span class="parcours__fleche" aria-hidden="true"></span>' : ""}<span class="parcours__etape">${esc(e)}</span></span>`).join("");
+    } else {
+      texte("hero-surtitre", a.surtitre);
+    }
     texte("hero-titre", a.titre);
     texte("hero-texte", a.texte);
     const boutons = [];
@@ -101,7 +111,7 @@
     html("apropos-texte", liste(a.paragraphes).map((p) => `<p>${esc(p)}</p>`).join(""));
     html("apropos-media", a.image
       ? `<img src="${esc(a.image)}" alt="L'équipe ${esc(S.nom)}" loading="lazy">`
-      : `<div class="placeholder"><img src="${esc(S.icone || "images/cle-de-sol.png")}" alt="" style="width:45%"></div>`);
+      : `<div class="about__logo"><img src="${esc(S.logo || "images/logo.png")}" alt="${esc(S.nom || "Holy Spirit Team")}"></div>`);
     html("apropos-chiffres", liste(a.chiffres).map((c) =>
       `<div class="stat"><strong>${esc(c.valeur)}</strong><span>${esc(c.label)}</span></div>`).join(""));
 
