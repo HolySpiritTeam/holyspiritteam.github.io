@@ -1,5 +1,25 @@
-[
-  { "date": "2026-11-15", "heure": "15h00", "titre": "Concert de louange", "lieu": "[Lieu à préciser]", "description": "Un après-midi de louange et d'adoration ouvert à tous." },
-  { "date": "2026-12-05", "heure": "09h00", "titre": "Action caritative de Noël", "lieu": "[Lieu à préciser]", "description": "Collecte et distribution de vivres et de cadeaux aux familles dans le besoin." },
-  { "date": "2026-12-31", "heure": "21h00", "titre": "Veillée de prière de fin d'année", "lieu": "[Lieu à préciser]", "description": "Rendre grâce à Dieu pour l'année écoulée et consacrer la nouvelle." }
-]
+{
+  "evenements": [
+    {
+      "date": "2026-11-15",
+      "heure": "15h00",
+      "titre": "Concert de louange",
+      "lieu": "[Lieu à préciser]",
+      "description": "Un après-midi de louange et d'adoration ouvert à tous."
+    },
+    {
+      "date": "2026-12-05",
+      "heure": "09h00",
+      "titre": "Action caritative de Noël",
+      "lieu": "[Lieu à préciser]",
+      "description": "Collecte et distribution de vivres et de cadeaux aux familles dans le besoin."
+    },
+    {
+      "date": "2026-12-31",
+      "heure": "21h00",
+      "titre": "Veillée de prière de fin d'année",
+      "lieu": "[Lieu à préciser]",
+      "description": "Rendre grâce à Dieu pour l'année écoulée et consacrer la nouvelle."
+    }
+  ]
+}

@@ -1,5 +1,25 @@
-[
-  { "date": "2026-09-20", "titre": "Visite à l'orphelinat", "resume": "Le département des œuvres sociales a partagé une journée de joie, de chants et de dons avec les enfants.", "image": "", "lien": "" },
-  { "date": "2026-08-30", "titre": "Soirée de louange et d'adoration", "resume": "Une soirée bénie de louange avec le groupe vocal, suivie d'un temps de prière et d'exhortation.", "image": "", "lien": "" },
-  { "date": "2026-07-12", "titre": "Campagne d'évangélisation", "resume": "Nos équipes sont allées à la rencontre des habitants pour partager l'Évangile et prier avec eux.", "image": "", "lien": "" }
-]
+{
+  "actualites": [
+    {
+      "date": "2026-09-20",
+      "titre": "Visite à l'orphelinat",
+      "resume": "Le département des œuvres sociales a partagé une journée de joie, de chants et de dons avec les enfants.",
+      "image": "",
+      "lien": ""
+    },
+    {
+      "date": "2026-08-30",
+      "titre": "Soirée de louange et d'adoration",
+      "resume": "Une soirée bénie de louange avec le groupe vocal, suivie d'un temps de prière et d'exhortation.",
+      "image": "",
+      "lien": ""
+    },
+    {
+      "date": "2026-07-12",
+      "titre": "Campagne d'évangélisation",
+      "resume": "Nos équipes sont allées à la rencontre des habitants pour partager l'Évangile et prier avec eux.",
+      "image": "",
+      "lien": ""
+    }
+  ]
+}

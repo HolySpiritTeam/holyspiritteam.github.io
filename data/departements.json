@@ -1,8 +1,40 @@
-[
-  { "icone": "musique", "nom": "Musical", "description": "Le cœur historique de HST : chantres et musiciens au service d'une louange et d'une adoration de qualité lors des cultes, concerts et événements.", "responsable": "" },
-  { "icone": "megaphone", "nom": "Communication & Médias", "description": "Photos, vidéos, réseaux sociaux et supports visuels pour partager la vie de l'équipe et le message de l'Évangile.", "responsable": "" },
-  { "icone": "priere", "nom": "Prière & Intercession", "description": "Le cœur spirituel de l'équipe : veillées, chaînes de prière et soutien spirituel des membres et des actions.", "responsable": "" },
-  { "icone": "cadeau", "nom": "Œuvres sociales", "description": "Visites aux orphelinats, hôpitaux et personnes vulnérables, collectes et distributions de dons.", "responsable": "" },
-  { "icone": "croix", "nom": "Évangélisation", "description": "Campagnes d'évangélisation, croisades et sorties de terrain pour annoncer la Bonne Nouvelle, à Songon et au-delà.", "responsable": "" },
-  { "icone": "groupe", "nom": "Accueil & Logistique", "description": "Organisation des événements, accueil des invités, matériel et intendance.", "responsable": "" }
-]
+{
+  "departements": [
+    {
+      "icone": "musique",
+      "nom": "Musical",
+      "description": "Le cœur historique de HST : chantres et musiciens au service d'une louange et d'une adoration de qualité lors des cultes, concerts et événements.",
+      "responsable": ""
+    },
+    {
+      "icone": "megaphone",
+      "nom": "Communication & Médias",
+      "description": "Photos, vidéos, réseaux sociaux et supports visuels pour partager la vie de l'équipe et le message de l'Évangile.",
+      "responsable": ""
+    },
+    {
+      "icone": "priere",
+      "nom": "Prière & Intercession",
+      "description": "Le cœur spirituel de l'équipe : veillées, chaînes de prière et soutien spirituel des membres et des actions.",
+      "responsable": ""
+    },
+    {
+      "icone": "cadeau",
+      "nom": "Œuvres sociales",
+      "description": "Visites aux orphelinats, hôpitaux et personnes vulnérables, collectes et distributions de dons.",
+      "responsable": ""
+    },
+    {
+      "icone": "croix",
+      "nom": "Évangélisation",
+      "description": "Campagnes d'évangélisation, croisades et sorties de terrain pour annoncer la Bonne Nouvelle, à Songon et au-delà.",
+      "responsable": ""
+    },
+    {
+      "icone": "groupe",
+      "nom": "Accueil & Logistique",
+      "description": "Organisation des événements, accueil des invités, matériel et intendance.",
+      "responsable": ""
+    }
+  ]
+}
