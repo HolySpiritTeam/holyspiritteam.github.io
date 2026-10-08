@@ -78,7 +78,7 @@ p { margin: 0 0 1em; }
 .brand { display: flex; align-items: center; gap: 12px; }
 .brand__logo { height: 62px; width: auto; }
 .brand__name { font: 700 1.45rem var(--titre); color: var(--primaire-fonce); letter-spacing: .3px; }
-.brand--light .brand__logo { height: 64px; }
+.brand--light .brand__logo { height: 64px; width: 64px; object-fit: contain; background: #fff; border-radius: 16px; padding: 6px; }
 .brand--light .brand__name { color: var(--blanc); }
 
 .nav { display: flex; align-items: center; gap: 28px; }
@@ -200,6 +200,13 @@ p { margin: 0 0 1em; }
 .about { display: grid; grid-template-columns: 1fr 1.1fr; gap: 64px; align-items: center; margin-bottom: 72px; }
 .about__media { border-radius: var(--rayon); overflow: hidden; aspect-ratio: 4/5; box-shadow: var(--ombre-forte); position: relative; }
 .about__media img { width: 100%; height: 100%; object-fit: cover; }
+/* Sans photo d'équipe : le logo, entier et net, sur fond blanc */
+.about__logo {
+  width: 100%; height: 100%; display: grid; place-items: center; padding: 12%;
+  background: radial-gradient(circle at 50% 40%, #fff 0%, #fff 55%, var(--creme) 100%);
+  border: 1px solid var(--bord); border-radius: var(--rayon);
+}
+.about__media .about__logo img { width: 100%; height: auto; max-height: 100%; object-fit: contain; }
 .about__body p { color: var(--texte-doux); font-size: 1.05rem; }
 .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 32px; }
 .stat { border-left: 3px solid; border-image: var(--degrade) 1; padding-left: 16px; }
