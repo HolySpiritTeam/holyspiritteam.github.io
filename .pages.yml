@@ -1,0 +1,304 @@
+# =====================================================================
+# HOLY SPIRIT TEAM — CONFIGURATION DE L'ESPACE ADMINISTRATEUR
+# Utilisé par Pages CMS (https://app.pagescms.org).
+# Définit les formulaires que voient les administrateurs.
+# =====================================================================
+
+media:
+  - name: images
+    label: Photos
+    input: images
+    output: /images
+    categories: [image]
+    rename: safe
+  - name: videos
+    label: Vidéos
+    input: videos
+    output: /videos
+    categories: [video]
+    rename: safe
+
+content:
+
+  # ------------------------------------------------------------------
+  - name: actualites
+    label: Actualités
+    type: file
+    path: data/actualites.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: resume
+        label: Résumé
+        type: text
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: images
+      - name: lien
+        label: Lien (facultatif, ex. publication Facebook)
+        type: string
+
+  # ------------------------------------------------------------------
+  - name: evenements
+    label: Événements
+    type: file
+    path: data/evenements.json
+    format: json
+    list: true
+    fields:
+      - name: date
+        label: Date
+        type: date
+        options:
+          format: yyyy-MM-dd
+      - name: heure
+        label: Heure (ex. 15h00)
+        type: string
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: lieu
+        label: Lieu
+        type: string
+      - name: description
+        label: Description
+        type: text
+
+  # ------------------------------------------------------------------
+  - name: galerie
+    label: Galerie photos
+    type: file
+    path: data/galerie.json
+    format: json
+    list: true
+    fields:
+      - name: image
+        label: Photo
+        type: image
+        options:
+          media: images
+      - name: legende
+        label: Légende
+        type: string
+      - name: categorie
+        label: Catégorie (sert aux filtres, ex. Louange, Social, Évangélisation, Équipe)
+        type: string
+
+  # ------------------------------------------------------------------
+  - name: videos
+    label: Vidéos
+    type: file
+    path: data/videos.json
+    format: json
+    list: true
+    fields:
+      - name: titre
+        label: Titre
+        type: string
+        required: true
+      - name: youtube
+        label: Lien YouTube
+        type: string
+      - name: fichier
+        label: Fichier vidéo (si pas de YouTube)
+        type: file
+        options:
+          media: videos
+
+  # ------------------------------------------------------------------
+  - name: departements
+    label: Départements
+    type: file
+    path: data/departements.json
+    format: json
+    list: true
+    fields:
+      - name: icone
+        label: Icône
+        type: select
+        options:
+          values:
+            - { name: musique, label: Musique }
+            - { name: micro, label: Micro }
+            - { name: priere, label: Prière (flamme) }
+            - { name: croix, label: Croix }
+            - { name: coeur, label: Cœur }
+            - { name: mains, label: Mains et cœur }
+            - { name: cadeau, label: Cadeau / Dons }
+            - { name: megaphone, label: Mégaphone }
+            - { name: camera, label: Appareil photo }
+            - { name: livre, label: Livre / Bible }
+            - { name: groupe, label: Groupe }
+            - { name: colombe, label: Colombe }
+      - name: nom
+        label: Nom du département
+        type: string
+        required: true
+      - name: description
+        label: Description
+        type: text
+      - name: responsable
+        label: Responsable
+        type: string
+
+  # ------------------------------------------------------------------
+  - name: site
+    label: Informations générales
+    type: file
+    path: data/site.json
+    format: json
+    fields:
+      - name: nom
+        label: Nom
+        type: string
+      - name: slogan
+        label: Slogan (pied de page)
+        type: text
+      - name: logo
+        label: Logo (en-tête)
+        type: image
+        options:
+          media: images
+      - name: icone
+        label: Icône (onglet et pied de page)
+        type: image
+        options:
+          media: images
+
+      - name: accueil
+        label: Bannière d'accueil
+        type: object
+        fields:
+          - { name: surtitre, label: Surtitre, type: string }
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+          - name: image
+            label: Image de fond (facultatif)
+            type: image
+            options:
+              media: images
+          - name: boutonPrincipal
+            label: Bouton principal
+            type: object
+            fields:
+              - { name: texte, label: Texte, type: string }
+              - { name: lien, label: Lien, type: string }
+          - name: boutonSecondaire
+            label: Bouton secondaire
+            type: object
+            fields:
+              - { name: texte, label: Texte, type: string }
+              - { name: lien, label: Lien, type: string }
+
+      - name: verset
+        label: Verset à la une
+        type: object
+        fields:
+          - { name: texte, label: Texte du verset, type: text }
+          - { name: reference, label: "Référence (ex. Actes 1 : 8)", type: string }
+
+      - name: apropos
+        label: Qui sommes-nous
+        type: object
+        fields:
+          - { name: titre, label: Titre, type: string }
+          - name: paragraphes
+            label: Paragraphes
+            type: text
+            list: true
+          - name: image
+            label: Photo de l'équipe
+            type: image
+            options:
+              media: images
+          - name: chiffres
+            label: Chiffres clés
+            type: object
+            list: true
+            fields:
+              - { name: valeur, label: Valeur (ex. 40+), type: string }
+              - { name: label, label: Libellé, type: string }
+
+      - name: valeurs
+        label: Nos piliers
+        type: object
+        list: true
+        fields:
+          - name: icone
+            label: Icône
+            type: select
+            options:
+              values:
+                - { name: musique, label: Musique }
+                - { name: micro, label: Micro }
+                - { name: priere, label: Prière (flamme) }
+                - { name: croix, label: Croix }
+                - { name: coeur, label: Cœur }
+                - { name: mains, label: Mains et cœur }
+                - { name: cadeau, label: Cadeau / Dons }
+                - { name: megaphone, label: Mégaphone }
+                - { name: camera, label: Appareil photo }
+                - { name: livre, label: Livre / Bible }
+                - { name: groupe, label: Groupe }
+                - { name: colombe, label: Colombe }
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+
+      - name: rejoindre
+        label: Nous rejoindre
+        type: object
+        fields:
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+          - name: bouton
+            label: Bouton
+            type: object
+            fields:
+              - { name: texte, label: Texte, type: string }
+              - { name: lien, label: Lien, type: string }
+
+      - name: soutenir
+        label: Soutenir nos œuvres
+        type: object
+        fields:
+          - { name: titre, label: Titre, type: string }
+          - { name: texte, label: Texte, type: text }
+          - name: moyens
+            label: Moyens de don
+            type: object
+            list: true
+            fields:
+              - { name: titre, label: Moyen (ex. Mobile Money), type: string }
+              - { name: details, label: "Détails (numéro, coordonnées…)", type: string }
+
+      - name: contact
+        label: Contact
+        type: object
+        fields:
+          - { name: adresse, label: Adresse, type: string }
+          - { name: telephone, label: Téléphone, type: string }
+          - { name: whatsapp, label: "WhatsApp (format international sans + ni espaces, ex. 2250700000000)", type: string }
+          - { name: email, label: E-mail, type: string }
+          - { name: horaires, label: Rencontres / répétitions, type: string }
+          - { name: formspree, label: "Adresse Formspree du formulaire (facultatif)", type: string }
+
+      - name: reseaux
+        label: Réseaux sociaux (laisser vide pour masquer)
+        type: object
+        fields:
+          - { name: facebook, label: Facebook, type: string }
+          - { name: youtube, label: YouTube, type: string }
+          - { name: instagram, label: Instagram, type: string }
+          - { name: tiktok, label: TikTok, type: string }
