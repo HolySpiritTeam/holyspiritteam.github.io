@@ -111,7 +111,7 @@
     html("apropos-texte", liste(a.paragraphes).map((p) => `<p>${esc(p)}</p>`).join(""));
     html("apropos-media", a.image
       ? `<img src="${esc(a.image)}" alt="L'équipe ${esc(S.nom)}" loading="lazy">`
-      : `<div class="placeholder"><img src="${esc(S.icone || "images/cle-de-sol.png")}" alt="" style="width:45%"></div>`);
+      : `<div class="about__logo"><img src="${esc(S.logo || "images/logo.png")}" alt="${esc(S.nom || "Holy Spirit Team")}"></div>`);
     html("apropos-chiffres", liste(a.chiffres).map((c) =>
       `<div class="stat"><strong>${esc(c.valeur)}</strong><span>${esc(c.label)}</span></div>`).join(""));
 
