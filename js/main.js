@@ -101,7 +101,7 @@
     html("apropos-texte", liste(a.paragraphes).map((p) => `<p>${esc(p)}</p>`).join(""));
     html("apropos-media", a.image
       ? `<img src="${esc(a.image)}" alt="L'équipe ${esc(S.nom)}" loading="lazy">`
-      : remplacement("groupe", "Photo de l'équipe"));
+      : `<div class="placeholder"><img src="${esc(S.icone || "images/cle-de-sol.png")}" alt="" style="width:45%"></div>`);
     html("apropos-chiffres", liste(a.chiffres).map((c) =>
       `<div class="stat"><strong>${esc(c.valeur)}</strong><span>${esc(c.label)}</span></div>`).join(""));
 
@@ -113,8 +113,16 @@
       </article>`).join(""));
   }
 
+  /* Masque une section vide et son lien dans le menu */
+  function masquer(id) {
+    const section = document.getElementById(id);
+    if (section) section.hidden = true;
+    $$(`.nav a[href="#${id}"]`).forEach((a) => (a.hidden = true));
+  }
+
   /* ---------- Départements ---------- */
   function departements() {
+    if (!liste(S.departements).length) return masquer("departements");
     html("departements-liste", liste(S.departements).map((d) => `
       <article class="card reveal">
         <div class="card__icon">${icone(d.icone)}</div>
@@ -126,7 +134,8 @@
 
   /* ---------- Actualités ---------- */
   function actualites() {
-    const items = liste(S.actualites).slice().sort((a, b) => lireDate(b.date) - lireDate(a.date));
+    const items = liste(S.actualites).filter((n) => n.titre).sort((a, b) => lireDate(b.date) - lireDate(a.date));
+    if (!items.length) return masquer("actualites");
     html("actualites-liste", items.length ? items.map((n, i) => `
       <article class="card card--media reveal">
         <div class="card__media">
@@ -147,6 +156,7 @@
     const items = liste(S.evenements)
       .filter((e) => lireDate(e.date) >= aujourdhui)
       .sort((a, b) => lireDate(a.date) - lireDate(b.date));
+    if (!items.length) return masquer("evenements");
     html("evenements-liste", items.length ? items.map((e) => {
       const d = lireDate(e.date);
       return `
@@ -167,7 +177,8 @@
   /* ---------- Galerie ---------- */
   let galerieVisible = [];
   function galerie(filtre = "Tout") {
-    const toutes = liste(S.galerie);
+    const toutes = liste(S.galerie).filter((p) => p.image); // les lignes sans photo sont ignorées
+    if (!toutes.length) return masquer("galerie");
     const categories = ["Tout", ...new Set(toutes.map((p) => p.categorie).filter(Boolean))];
     html("galerie-filtres", categories.length > 2 ? categories.map((c) =>
       `<button class="filter${c === filtre ? " is-active" : ""}" data-filtre="${esc(c)}">${esc(c)}</button>`).join("") : "");
@@ -185,7 +196,8 @@
 
   /* ---------- Vidéos ---------- */
   function videos() {
-    const items = liste(S.videos);
+    const items = liste(S.videos).filter((v) => idYoutube(v.youtube) || v.fichier); // vidéos sans lien ignorées
+    if (!items.length) return masquer("videos");
     html("videos-liste", items.length ? items.map((v, i) => {
       const id = idYoutube(v.youtube);
       let media;
