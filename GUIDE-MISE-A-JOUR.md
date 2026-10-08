@@ -19,16 +19,28 @@ Le menu de gauche affiche : **Actualités, Événements, Galerie photos, Vidéos
 
 ## 2. Modifier le contenu
 
-| Je veux… | Où aller | Comment |
-|---|---|---|
-| Publier une actualité | Actualités | « Ajouter » en bas de la liste, remplir, ajouter une photo, **Enregistrer** |
-| Annoncer un événement | Événements | Même principe. Les événements passés disparaissent seuls |
-| Ajouter des photos | Galerie photos | « Ajouter », choisir la photo, écrire une légende et une catégorie |
-| Ajouter une vidéo | Vidéos | Coller le lien YouTube (recommandé) |
-| Changer le téléphone, l'e-mail ou les réseaux | Informations générales → Contact / Réseaux sociaux | |
-| Modifier un responsable de département | Départements | |
+Chaque rubrique affiche une liste repliée de titres. **Cliquez sur un titre** pour l'ouvrir et le modifier.
 
-Après **Enregistrer**, le site public se met à jour en **1 à 3 minutes**. Rafraîchissez la page pour voir la nouvelle version.
+| Je veux… | Comment |
+|---|---|
+| **Ajouter** un élément | Bouton **+ Add an item** en bas de la liste, puis remplir les cases |
+| **Modifier** un élément | Cliquer sur son titre, puis changer le texte |
+| **Supprimer** un élément | Cliquer sur la **corbeille 🗑** à droite de son titre |
+| **Ajouter une photo** | **Upload** pour envoyer une photo du téléphone ou de l'ordinateur, **Select** pour en choisir une déjà envoyée |
+| **Changer l'ordre** | Faire glisser avec les **6 petits points ⋮⋮** à gauche du titre |
+| **Enregistrer** | Bouton **Save** en haut à droite. **À faire avant de quitter la rubrique !** |
+
+Où trouver quoi :
+- **Actualités** : les activités passées, avec photo. La plus récente s'affiche en premier.
+- **Événements** : ce qui est à venir. Les événements passés disparaissent seuls du site.
+- **Galerie photos** : photo, légende et catégorie.
+- **Vidéos** : coller le lien YouTube (recommandé).
+- **Départements** : nom, description et responsable.
+- **Informations générales** : textes de l'accueil, verset, « Qui sommes-nous », chiffres clés, dons, contact, réseaux sociaux.
+
+Une rubrique vide (aucune actualité, aucune photo…) est masquée automatiquement sur le site.
+
+Après **Save**, le site public se met à jour en **1 à 3 minutes**. Rafraîchissez la page pour voir la nouvelle version.
 
 **Conseils :**
 - Les photos doivent faire moins de 1 Mo. Pour réduire une photo de téléphone, utilisez https://squoosh.app.
