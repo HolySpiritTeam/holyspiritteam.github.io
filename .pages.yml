@@ -26,28 +26,35 @@ content:
     type: file
     path: data/actualites.json
     format: json
-    list: true
     fields:
-      - name: date
-        label: Date
-        type: date
-        options:
-          format: yyyy-MM-dd
-      - name: titre
-        label: Titre
-        type: string
-        required: true
-      - name: resume
-        label: Résumé
-        type: text
-      - name: image
-        label: Photo
-        type: image
-        options:
-          media: images
-      - name: lien
-        label: Lien (facultatif, ex. publication Facebook)
-        type: string
+      - name: actualites
+        label: Liste des actualités
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titre} — {date}"
+        fields:
+          - name: date
+            label: Date
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: titre
+            label: Titre
+            type: string
+            required: true
+          - name: resume
+            label: Résumé
+            type: text
+          - name: image
+            label: Photo
+            type: image
+            options:
+              media: images
+          - name: lien
+            label: Lien (facultatif, ex. publication Facebook)
+            type: string
 
   # ------------------------------------------------------------------
   - name: evenements
@@ -55,26 +62,33 @@ content:
     type: file
     path: data/evenements.json
     format: json
-    list: true
     fields:
-      - name: date
-        label: Date
-        type: date
-        options:
-          format: yyyy-MM-dd
-      - name: heure
-        label: Heure (ex. 15h00)
-        type: string
-      - name: titre
-        label: Titre
-        type: string
-        required: true
-      - name: lieu
-        label: Lieu
-        type: string
-      - name: description
-        label: Description
-        type: text
+      - name: evenements
+        label: Liste des événements
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{date} — {titre}"
+        fields:
+          - name: date
+            label: Date
+            type: date
+            options:
+              format: yyyy-MM-dd
+          - name: heure
+            label: Heure (ex. 15h00)
+            type: string
+          - name: titre
+            label: Titre
+            type: string
+            required: true
+          - name: lieu
+            label: Lieu
+            type: string
+          - name: description
+            label: Description
+            type: text
 
   # ------------------------------------------------------------------
   - name: galerie
@@ -82,19 +96,26 @@ content:
     type: file
     path: data/galerie.json
     format: json
-    list: true
     fields:
-      - name: image
-        label: Photo
-        type: image
-        options:
-          media: images
-      - name: legende
-        label: Légende
-        type: string
-      - name: categorie
-        label: Catégorie (sert aux filtres, ex. Louange, Social, Évangélisation, Équipe)
-        type: string
+      - name: galerie
+        label: Liste des photos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{legende}"
+        fields:
+          - name: image
+            label: Photo
+            type: image
+            options:
+              media: images
+          - name: legende
+            label: Légende
+            type: string
+          - name: categorie
+            label: Catégorie (sert aux filtres, ex. Louange, Social, Évangélisation, Équipe)
+            type: string
 
   # ------------------------------------------------------------------
   - name: videos
@@ -102,20 +123,27 @@ content:
     type: file
     path: data/videos.json
     format: json
-    list: true
     fields:
-      - name: titre
-        label: Titre
-        type: string
-        required: true
-      - name: youtube
-        label: Lien YouTube
-        type: string
-      - name: fichier
-        label: Fichier vidéo (si pas de YouTube)
-        type: file
-        options:
-          media: videos
+      - name: videos
+        label: Liste des vidéos
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titre}"
+        fields:
+          - name: titre
+            label: Titre
+            type: string
+            required: true
+          - name: youtube
+            label: Lien YouTube
+            type: string
+          - name: fichier
+            label: Fichier vidéo (si pas de YouTube)
+            type: file
+            options:
+              media: videos
 
   # ------------------------------------------------------------------
   - name: departements
@@ -123,35 +151,42 @@ content:
     type: file
     path: data/departements.json
     format: json
-    list: true
     fields:
-      - name: icone
-        label: Icône
-        type: select
-        options:
-          values:
-            - { name: musique, label: Musique }
-            - { name: micro, label: Micro }
-            - { name: priere, label: Prière (flamme) }
-            - { name: croix, label: Croix }
-            - { name: coeur, label: Cœur }
-            - { name: mains, label: Mains et cœur }
-            - { name: cadeau, label: Cadeau / Dons }
-            - { name: megaphone, label: Mégaphone }
-            - { name: camera, label: Appareil photo }
-            - { name: livre, label: Livre / Bible }
-            - { name: groupe, label: Groupe }
-            - { name: colombe, label: Colombe }
-      - name: nom
-        label: Nom du département
-        type: string
-        required: true
-      - name: description
-        label: Description
-        type: text
-      - name: responsable
-        label: Responsable
-        type: string
+      - name: departements
+        label: Liste des départements
+        type: object
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{nom}"
+        fields:
+          - name: icone
+            label: Icône
+            type: select
+            options:
+              values:
+                - { name: musique, label: Musique }
+                - { name: micro, label: Micro }
+                - { name: priere, label: Prière (flamme) }
+                - { name: croix, label: Croix }
+                - { name: coeur, label: Cœur }
+                - { name: mains, label: Mains et cœur }
+                - { name: cadeau, label: Cadeau / Dons }
+                - { name: megaphone, label: Mégaphone }
+                - { name: camera, label: Appareil photo }
+                - { name: livre, label: Livre / Bible }
+                - { name: groupe, label: Groupe }
+                - { name: colombe, label: Colombe }
+          - name: nom
+            label: Nom du département
+            type: string
+            required: true
+          - name: description
+            label: Description
+            type: text
+          - name: responsable
+            label: Responsable
+            type: string
 
   # ------------------------------------------------------------------
   - name: site
@@ -226,7 +261,10 @@ content:
           - name: chiffres
             label: Chiffres clés
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{valeur} {label}"
             fields:
               - { name: valeur, label: Valeur (ex. 40+), type: string }
               - { name: label, label: Libellé, type: string }
@@ -234,7 +272,10 @@ content:
       - name: valeurs
         label: Nos piliers
         type: object
-        list: true
+        list:
+          collapsible:
+            collapsed: true
+            summary: "{titre}"
         fields:
           - name: icone
             label: Icône
@@ -278,7 +319,10 @@ content:
           - name: moyens
             label: Moyens de don
             type: object
-            list: true
+            list:
+              collapsible:
+                collapsed: true
+                summary: "{titre}"
             fields:
               - { name: titre, label: Moyen (ex. Mobile Money), type: string }
               - { name: details, label: "Détails (numéro, coordonnées…)", type: string }
