@@ -1,19 +1,19 @@
 {
   "actualites": [
     {
-      "date": "2026-09-13",
-      "titre": "Don aux veuves des AD de Songon Agban et Songon cité la grâce",
-      "resume": "Le département des œuvres sociales a partagé une journée de joie, de chants et de dons avec les veuves."
-    },
-    {
       "date": "2026-08-25",
-      "titre": "LA NUIT DE L'INTIMITE 1ère édition",
-      "resume": "Une veillée louange et d'adoration avec le groupe vocal."
+      "titre": "La Nuit de l'Intimité 1ère édition",
+      "resume": "Une veillée de louange et d'adoration avec le groupe vocal."
     },
     {
       "date": "2026-09-12",
       "titre": "Campagne d'évangélisation",
       "resume": "Nos équipes sont allées à la rencontre des habitants de Songon cité la grâce pour partager l'Évangile et prier avec eux."
+    },
+    {
+      "date": "2026-09-13",
+      "titre": "Don aux veuves des AD de Songon Agban et Songon cité la grâce",
+      "resume": "Le département des œuvres sociales a partagé une journée de joie, de chants et de dons avec les veuves."
     }
   ]
 }
