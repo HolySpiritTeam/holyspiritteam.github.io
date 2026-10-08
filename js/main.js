@@ -76,7 +76,17 @@
   /* ---------- Accueil & verset ---------- */
   function accueil() {
     const a = S.accueil || {};
-    texte("hero-surtitre", a.surtitre);
+    // Surtitre : « Songon > Côte d'Ivoire > Afrique » devient un parcours animé
+    const etapes = String(a.surtitre || "").split(/\s*(?:→|•|>|\|)\s*/).filter(Boolean);
+    const surtitre = $("#hero-surtitre");
+    if (etapes.length > 1) {
+      surtitre.className = "parcours";
+      surtitre.setAttribute("aria-label", etapes.join(", puis "));
+      surtitre.innerHTML = etapes.map((e, i) =>
+        `<span class="parcours__pas" style="--i:${i}">${i ? '<span class="parcours__fleche" aria-hidden="true"></span>' : ""}<span class="parcours__etape">${esc(e)}</span></span>`).join("");
+    } else {
+      texte("hero-surtitre", a.surtitre);
+    }
     texte("hero-titre", a.titre);
     texte("hero-texte", a.texte);
     const boutons = [];
