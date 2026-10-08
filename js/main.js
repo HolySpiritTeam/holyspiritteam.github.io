@@ -356,7 +356,10 @@
       if (!r.ok) throw new Error(`data/${f}.json`);
       return r.json();
     })))
-    .then(([site, dep, act, evt, gal, vid]) => {
+    .then(([site, ...listes]) => {
+      // Accepte une liste directe [...] ou une liste rangée { "actualites": [...] }
+      const [dep, act, evt, gal, vid] = listes.map((x) =>
+        Array.isArray(x) ? x : (x && Object.values(x).find(Array.isArray)) || []);
       S = { ...site, departements: dep, actualites: act, evenements: evt, galerie: gal, videos: vid };
       identite();
       accueil();
